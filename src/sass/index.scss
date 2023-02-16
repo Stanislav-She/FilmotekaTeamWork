@@ -1,0 +1,21 @@
+@import './utils/variables';
+@import './common';
+@import './utils/mixins';
+@import './utils/visually-hidden';
+
+@import './base/global';
+@import './base/container';
+
+@import './commponents/button';
+@import './commponents/modal-movie';
+@import './commponents/modal-auth';
+@import './commponents/backdrop-footer';
+@import './commponents/spinner';
+@import './commponents/modal-footer';
+@import './commponents/pagination';
+@import './commponents/films';
+@import './commponents/switcher';
+@import './commponents/top-button';
+
+@import './layout/header';
+@import './layout/footer';

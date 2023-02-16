@@ -1,0 +1,151 @@
+.film-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+  list-style: none;
+}
+.film-card {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  cursor: pointer;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 280px;
+  height: 470px;
+}
+
+.film-card:hover,
+.film-card:focus {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  transform: scale(1.03);
+}
+
+.film-card__img {
+  width: 280px;
+  height: 402px;
+}
+
+.card-wrap {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.film-card__title {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--primaryTextDark);
+  body.dark__theme & {
+    color: var(--primaryTextLight);
+  }
+}
+
+.film-card__info {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--accentTextColor);
+}
+
+.film-card__rating {
+  position: absolute;
+  bottom: 80px;
+  right: 10px;
+  padding-top: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--primaryTextDark);
+  background-color: var(--accentBtnColor);
+  border-radius: 5px;
+  pointer-events: none;
+  transition: color var(--timingFunction);
+
+  body.dark__theme & {
+    color: var(--primaryTextLight);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .film-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+  .film-card__img {
+    width: 336px;
+    height: 455px;
+  }
+  .film-card {
+    max-width: 336px;
+    height: 525px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .film-list {
+    gap: 16px;
+  }
+  .film-card__img {
+    width: 395px;
+    height: 574px;
+  }
+  .film-card__title {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .film-card__info {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .film-card {
+    max-width: 395px;
+    height: 655px;
+  }
+}
+
+.cards-container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 320px) {
+  .cards-container {
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cards-container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cards-container {
+    width: 1280px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .film-card__rating {
+    bottom: 90px;
+  }
+}
