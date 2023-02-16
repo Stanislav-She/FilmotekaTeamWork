@@ -1,8 +1,8 @@
 {
-  "name": "filmoteka",
+  "name": "filmotekateamwork",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://TommoBosha.github.io/filmoteka",
+  "homepage": "https://github.com/Stanislav-She/FilmotekaTeamWork",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /filmoteka/"
